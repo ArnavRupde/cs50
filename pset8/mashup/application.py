@@ -28,7 +28,7 @@ def index():
     if not os.environ.get("API_KEY"):
         raise RuntimeError("API_KEY not set")
     return render_template("index.html", key=os.environ.get("API_KEY"))
-
+# routing detail
 @app.route("/articles")
 def articles():
     """Look up articles for geo."""
